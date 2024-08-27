@@ -42,5 +42,11 @@ public class Magazine implements Product {
 		}
 		return basePrice + (basePrice * 0.05) - (basePrice * 0.02);
 	}
+	
+	@Override
+	public String toString() {
+		return name + " - " + author + ", $" + String.format("%.2f",  getFinalPrice()); 
+	}
+
 
 }

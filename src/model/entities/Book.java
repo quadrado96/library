@@ -42,5 +42,10 @@ public class Book implements Product {
 		}
 		return basePrice + (basePrice * 0.10);
 	}
+	
+	@Override
+	public String toString() {
+		return name + " - " + author + ", $" + String.format("%.2f",  getFinalPrice()); 
+	}
 
 }

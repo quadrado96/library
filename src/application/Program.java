@@ -32,17 +32,17 @@ public class Program {
 				double price = sc.nextDouble();
 				sc.nextLine();
 				System.out.print("What type of product to order (Book/Magazine/Ebook)? ");
-				String productType = sc.nextLine().toUpperCase();
+				String productType = sc.nextLine();
 				
-				if (productType == "BOOK") {
+				if (productType.equalsIgnoreCase("Book")) {
 					productList.add(new Book(name, author, price));
 				}
 				
-				if (productType == "MAGAZINE") {
+				if (productType.equalsIgnoreCase("Magazine")) {
 					productList.add(new Magazine(name, author, price));
 				}
 				
-				if (productType == "EBOOK") {
+				if (productType.equalsIgnoreCase("Ebook")) {
 					productList.add(new Ebook(name, author, price));
 				}
 				
@@ -53,10 +53,11 @@ public class Program {
 		} catch (ProductException e) {
 			System.out.println(e.getMessage());
 		}
+		sc.close();
+		System.out.println("\nOrder data:");
 		
-		System.out.println("Order data:");
 		for(Product product: productList) {
-			System.out.println(product);
+			System.out.println(product.toString());
 		}
 	}
 
