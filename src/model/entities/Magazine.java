@@ -37,7 +37,10 @@ public class Magazine implements Product {
 	}
 
 	public double getFinalPrice() {
-		return 0;
+		if (basePrice <= 0) {
+			throw new ProductException("Invalid price. Price can't be equal or less than 0");
+		}
+		return basePrice + (basePrice * 0.05) - (basePrice * 0.02);
 	}
 
 }
