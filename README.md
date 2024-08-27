@@ -7,24 +7,23 @@ This project involves the creation of a simple bookstore management system in Ja
 ## Requirements
 
 1. **Interface `Product`**:
-   - Define an interface `Product` with a method `double calculateFinalPrice()`.
-   - Include a `default` method `displayDetails()` to print basic product details.
+   - Define an interface `Product` with a method `double getFinalPrice()`.
 
 2. **Classes `Book`, `Magazine`, and `Ebook`**:
    - Implement the `Product` interface in three classes: `Book`, `Magazine`, and `Ebook`.
-   - Each class should have attributes like `String title`, `String author`, and `double basePrice`.
-   - The `calculateFinalPrice()` method should be implemented differently for each product:
+   - Each class should have attributes like `String name`, `String author`, and `double basePrice`.
+   - The `getFinalPrice()` method should be implemented differently for each product:
      - **Book**: Apply a 10% tax.
      - **Magazine**: Apply a 5% tax and a 2% discount.
      - **Ebook**: Apply a 15% discount (eBooks are not taxed).
 
 3. **Custom Exception `InvalidPriceException`**:
    - Create a custom exception `InvalidPriceException` to be thrown when a product's base price is less than or equal to zero.
-   - Handle this exception within the `calculateFinalPrice()` implementations.
+   - Handle this exception within the `getFinalPrice()` implementations.
 
-4. **Class `Bookstore`**:
-   - Create a `Bookstore` class with a `main` method to instantiate various products (books, magazines, and eBooks) and add them to a list.
-   - Iterate through the list and display the details of each product using the `displayDetails()` method.
+4. **Class `Program`**:
+   - Create a `Program` class with a `main` method to instantiate various products (books, magazines, and eBooks) and add them to a list.
+   - Iterate through the list and display the details of each product using the `describeOrder()` method.
    - Print the final price of each product, capturing the `InvalidPriceException` if it occurs.
 
 ## Usage
