@@ -26,6 +26,6 @@ This project involves the creation of a simple bookstore management system in Ja
    - Iterate through the list and display the details of each product using the `describeOrder()` method.
    - Print the final price of each product, capturing the `InvalidPriceException` if it occurs.
 
-## Usage
+## Usage  
 
 This project demonstrates the use of object-oriented programming (OOP) principles in Java, including interfaces, default methods, polymorphism, and exception handling. The goal is to provide a real-world scenario where these concepts can be applied effectively.
